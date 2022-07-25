@@ -1,0 +1,36 @@
+@media screen and (min-width: 1024px) {
+  .dashboard-wrapper {
+    margin-left: 250px;
+    transition: 0.6s linear;
+    width: calc(100% - 250px);
+    .header-left {
+      .logo {
+        padding: 16px;
+      }
+      .menu-button {
+        display: none;
+      }
+    }
+  }
+  #header-dashboard {
+    width: calc(100% - 250px) !important;
+    left: 250px !important;
+    transition: 0.6s linear;
+  }
+  .navbar-container {
+    width: min-content;
+  }
+
+  .modal-container {
+    width: calc(100% - 250px);
+    left: 250px;
+    transition: 0.6s linear;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .view-detail-table,
+  .payment-method-table {
+    display: none;
+  }
+}

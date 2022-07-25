@@ -1,0 +1,48 @@
+.shop-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .avatar-shop {
+    padding: 24px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--greyLighter);
+    .avatar-letter {
+      width: 48px;
+      height: 48px;
+      background-color: var(--primaryColor);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--whiteColor);
+      border-radius: 100%;
+      margin-bottom: 16px;
+    }
+    .shop-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--darkColor);
+    }
+  }
+  .overview-shop {
+    padding: 24px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .number-reverse {
+      display: flex;
+      justify-content: space-between;
+    }
+    .view-shop {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 13px;
+        border-bottom: 1px solid var(--greyDarker);
+      }
+    }
+  }
+}
