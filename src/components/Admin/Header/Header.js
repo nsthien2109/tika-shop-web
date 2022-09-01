@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 import avaDemo from "../../../assets/images/ava.png";
+import {accountSelector} from '../../../redux/selector';
 
 const HeaderDashboard = ({ openNavbar, openMenu, isOpenMenu }) => {
+  const account = useSelector(accountSelector);
+
   const isOpenNav = () => {
     openNavbar();
   };
@@ -36,7 +39,7 @@ const HeaderDashboard = ({ openNavbar, openMenu, isOpenMenu }) => {
         className={`header-settings ${
           isOpenMenu ? "right-4" : "right-[-100%]"
         }`}>
-        <div className="name-admin">Thien Dep Trai</div>
+        <div className="name-admin">{!account ? 'User' : `${account.data.firstName} ${account.data.lastName}`}</div>
         <div className="header-settings-item">
           <i className="ri-admin-line"></i> <p>Profile</p>
         </div>

@@ -13,6 +13,11 @@ export default createSlice({
             error : false,
             success : false,
         },
+        userInfo : {
+            user : null,
+            isFetching : false,
+            error : false,
+        },
         message : null
     },
     reducers : {
@@ -29,7 +34,6 @@ export default createSlice({
         loginFailure : (state, action) => {
             state.login.isFetching = false;
             state.login.error = true;
-            state.login.success = false;
             state.message = action.payload;
         },
 
@@ -49,6 +53,23 @@ export default createSlice({
             state.register.isFetching = false;
             state.register.success = false;
             state.register.error = true;
+            state.message = action.payload;
+        },
+
+        /** Get user infomation */
+        userStart : (state, action )=> {
+            state.userInfo.isFetching = true;
+            state.message = null;
+        },
+        userSuccess : (state, action) => {
+            state.userInfo.isFetching = false;
+            state.userInfo.error = false;
+            state.userInfo.user = action.payload;
+            state.message = null;
+        },
+        userFailure : (state, action) => {
+            state.userInfo.isFetching = false;
+            state.userInfo.error = true;
             state.message = action.payload;
         }
     }

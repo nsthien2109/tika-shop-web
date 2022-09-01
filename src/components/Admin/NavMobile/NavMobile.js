@@ -40,26 +40,34 @@ const NavBar = ({ isOpenNav, closeNavbar }) => {
                 <i className="ri-store-2-line"></i>
                 <p className="pl-3 navbar-item-title">Stores</p>
               </Link>
-              <div onClick={closeNav} className="w-full navbar-item">
+              <Link
+                to="/admin-system/product-management"
+                onClick={closeNav}
+                className="w-full navbar-item">
                 <i className="ri-product-hunt-line"></i>
                 <p className="pl-3 navbar-item-title">Product</p>
-              </div>
-              <div onClick={closeNav} className="w-full navbar-item">
-                <i className="ri-user-follow-line"></i>s
-                <p className="pl-3 navbar-item-title">Follower</p>
-              </div>
-              <div onClick={closeNav} className="w-full navbar-item">
+              </Link>
+              <Link
+                to="/admin-system/banner-management"
+                onClick={closeNav}
+                className="w-full navbar-item">
                 <i className="ri-advertisement-line"></i>
                 <p className="pl-3 navbar-item-title">Banner</p>
-              </div>
-              <div onClick={closeNav} className="w-full navbar-item">
+              </Link>
+              <Link
+                to="/admin-system/category-management"
+                onClick={closeNav}
+                className="w-full navbar-item">
                 <i className="ri-apps-2-line"></i>
                 <p className="pl-3 navbar-item-title">Category</p>
-              </div>
-              <div onClick={closeNav} className="w-full navbar-item">
+              </Link>
+              <Link
+                to="/admin-system/order-management"
+                onClick={closeNav}
+                className="w-full navbar-item">
                 <i className="ri-bill-line"></i>
                 <p className="pl-3 navbar-item-title">Orders</p>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

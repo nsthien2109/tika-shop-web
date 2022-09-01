@@ -2,7 +2,7 @@ import React from "react";
 import welcomImg from "../../../assets/images/welcome.png";
 import avaDemo from "../../../assets/images/ava.png";
 
-const ProfileCard = () => {
+const ProfileCard = ({account}) => {
   return (
     <>
       <div className="profile-card card">
@@ -20,7 +20,7 @@ const ProfileCard = () => {
         </div>
         <div className="profile-card-content">
           <div className="user-store">
-            <p className="user-name">Si Thien</p>
+            <p className="user-name">{!account ? "User" : account.firstName + " " +account.lastName}</p>
             <p className="store-name">Nike</p>
           </div>
           <div className="button-profile">
