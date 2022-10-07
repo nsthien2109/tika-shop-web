@@ -103,7 +103,7 @@ const StoresManagement = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {stores &&
           stores.map((store) => {
-            return <ShopItem store={store} />;
+            return <ShopItem store={store} key={store.storeName} />;
           })}
       </div>
       <Modal
@@ -147,7 +147,11 @@ const StoresManagement = () => {
             className="form-input w-full border px-2 py-1 rounded my-2">
             {category &&
               category.map((cate) => {
-                return <option value={cate.value}>{cate.name}</option>;
+                return (
+                  <option key={cate.value} value={cate.value}>
+                    {cate.name}
+                  </option>
+                );
               })}
           </select>
           <TextInput
@@ -203,7 +207,11 @@ const StoresManagement = () => {
             className="form-input w-full border px-2 py-1 rounded my-2">
             {owners &&
               owners.map((user) => {
-                return <option value={user.value}>{user.email}</option>;
+                return (
+                  <option key={user.value} value={user.value}>
+                    {user.email}
+                  </option>
+                );
               })}
           </select>
 

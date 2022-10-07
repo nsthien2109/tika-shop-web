@@ -55,16 +55,17 @@ const CategoryTable = ({
             </tr>
           </thead>
           <tbody className="content-table">
-            {categories.data.map((category) => {
-              return (
-                <CategoryItem
-                  key={category.categoryName}
-                  category={category}
-                  handleDeleteCategory={handleDeleteCategory}
-                  handleUpdateCategory={handleUpdateCategory}
-                />
-              );
-            })}
+            {categories &&
+              categories.data.map((category) => {
+                return (
+                  <CategoryItem
+                    key={category.categoryName}
+                    category={category}
+                    handleDeleteCategory={handleDeleteCategory}
+                    handleUpdateCategory={handleUpdateCategory}
+                  />
+                );
+              })}
           </tbody>
         </table>
       </div>
